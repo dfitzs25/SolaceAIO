@@ -1,0 +1,245 @@
+/*
+colors to use 
+feffff - white
+#DEF2F1 - a very light blue green
+#3AAFA9 - a blue green 
+#2B7A78 - a dark blue green
+#17252A - near black hint of green
+*/
+:root{
+    --white: #feffff;
+    --light: #def2f1;
+    --blueGreen: #3aafa9;
+    --dark: #2b7a78;
+    --black: #17252a;
+}
+
+
+header {
+
+    background: var(--black);
+}
+header h1{
+    color: var(--light);
+}
+header img{
+    width: 13em;
+}
+body{
+    background-color: var(--white);
+    color: var(--black);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+body h2{
+    color: var(--dark);
+}
+
+
+.platforms img{
+    padding-left: 2em;
+    width: 7em;
+}
+.buttons{
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border-color: var(--black);
+    background-color: var(--black);
+}
+button:hover{
+    background-color: var(--dark);
+}
+button:active{
+    background-color: var(--light) ;
+}
+
+
+.platforms h2{
+    text-align: center;
+}
+.ids{
+    display: none;
+}
+
+.creatorImg{
+    border: 4px solid var(--black);
+    margin-top: -40px;
+    width: 10em;
+    float:right;
+}
+
+a:visited{
+    color: var(--dark);
+}
+a:link{
+        color: var(--blueGreen);
+}
+a:hover{
+    color: var(--dark);
+}
+a:active{
+    color: var(--light);
+}
+.header{
+    display: grid;
+    grid-area: auto;
+    grid-template-columns: repeat(2, [col] auto);
+    grid-template-rows: repeat(1,[row] auto);
+}
+.links,.left{
+    display:flex
+}
+.links{
+    justify-content: flex-end;
+    align-self: center;
+   
+}
+.links a{
+    font-size: 1.3em;
+    padding-right: 3em;
+}
+.left h1{
+    align-self: center;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 2100px){
+    /*
+    This is for very wide screens 
+    */
+    body{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    body p, body h2{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    .links a{
+        font-size: large;
+        padding-left: 2.5em;
+        padding-right: 10px;
+    }
+
+}
+
+@media screen and (max-width: 1600px){
+    /*
+    This is for large screens 
+    */
+    body{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    body p, body h2{
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+    .left img{
+        width: 10em;
+    }
+    .links a{
+        padding-left: 1em;
+    }
+    
+}
+
+@media screen and (max-width: 1200px){
+    /*
+    This is for large screens but not as large as the previous one 
+    */
+    body{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    body p, body h2{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .creatorImg{
+        margin-top: 20px;  
+    }
+    
+}
+
+@media screen and (max-width: 1025px){
+    /*
+    This is for small screens 
+    */
+    body{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    body p, body h2{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+   
+    .links{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /*
+    This is for tablets 
+    */
+    body{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    body p, body h2{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .header{
+        display: grid;
+        grid-area: auto;
+        grid-template-columns: repeat(2, [col] auto);
+        grid-template-rows: repeat(2,[row] auto);
+    }
+    .links{
+        flex-direction: row;
+        justify-content: space-between;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .left{
+        grid-row-start: 1;
+        grid-column-end: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+    .left img{
+        width: 6em
+    }
+    .links a{
+        padding-right: .5em;
+        font-size: large;
+        padding-left: .5em;
+    }
+    .creatorImg{
+        margin-top: 0em;
+        width: 8em;
+    }
+    .buttons img{
+        width: 4em;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    /*
+    This is for anything smaller than tablets 
+    */
+    .links a{
+        font-size: medium;
+        padding-left: .0em;
+    }
+    
+}
